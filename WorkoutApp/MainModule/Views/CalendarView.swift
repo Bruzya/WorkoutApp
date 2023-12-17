@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CalendarView: UIView {
+final class CalendarView: UIView {
     
-    //MARK: - Properties
-    
+    //MARK: - UI
+    private let collectionView = CalendarCollectionView()
     
     //MARK: - Lifecycle
     override init(frame: CGRect) {
@@ -31,14 +31,16 @@ private extension CalendarView {
         backgroundColor = UIColor.mainGreen
         layer.cornerRadius = 10
         translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(collectionView)
     }
     
      func setConstraints() {
         NSLayoutConstraint.activate([
-            
-            
-            
-            
+            collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 105),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
         ])
     }
 }

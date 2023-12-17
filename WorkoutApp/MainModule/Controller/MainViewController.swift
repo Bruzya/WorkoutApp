@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     //TODO: - Refactor UI via MVC into view module
     //TODO: - refactor via uiview constructor to reduce code
@@ -36,9 +36,10 @@ class MainViewController: UIViewController {
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
     
+    //TODO: - refactor with UIButtonConfiguration
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor.addWorkoutButton
+        button.backgroundColor = UIColor.mainYellow
         button.layer.cornerRadius = 15
         button.setImage(.plusButton, for: .normal)
         button.imageEdgeInsets = UIEdgeInsets(top: 0,
@@ -51,7 +52,7 @@ class MainViewController: UIViewController {
                                               bottom: 0,
                                               right: 0)
         button.titleLabel?.font = UIFont.robotoMedium12()
-        button.tintColor = UIColor.plusButton
+        button.tintColor = UIColor.mainDarkGreen
         button.addShadowOnView()
         button.addTarget(self, action: #selector(addWorkoutButtonPressed), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false

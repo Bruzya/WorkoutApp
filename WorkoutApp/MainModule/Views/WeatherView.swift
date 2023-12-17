@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherView: UIView {
+final class WeatherView: UIView {
     
     //TODO: - refactor UILabels by constructor
     //MARK: - UI

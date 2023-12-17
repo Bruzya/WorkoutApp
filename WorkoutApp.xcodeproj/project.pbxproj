@@ -18,6 +18,8 @@
 		52E525FF2B2F022400E5DF1A /* UIFont + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E525FE2B2F022400E5DF1A /* UIFont + ext.swift */; };
 		52E526022B2F038900E5DF1A /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E526002B2F038900E5DF1A /* Roboto-Bold.ttf */; };
 		52E526032B2F038900E5DF1A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E526012B2F038900E5DF1A /* Roboto-Medium.ttf */; };
+		52E526052B2F0A5F00E5DF1A /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */; };
+		52E526082B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526072B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		52E525FE2B2F022400E5DF1A /* UIFont + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + ext.swift"; sourceTree = "<group>"; };
 		52E526002B2F038900E5DF1A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		52E526012B2F038900E5DF1A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		52E526072B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		52E525ED2B2D679A00E5DF1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52E526062B2F0C2500E5DF1A /* Cell */,
+				52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */,
 				52E525F22B2D90CC00E5DF1A /* CalendarView.swift */,
 				52E525F82B2EEA4D00E5DF1A /* WeatherView.swift */,
 			);
@@ -160,6 +166,14 @@
 				52E525FE2B2F022400E5DF1A /* UIFont + ext.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		52E526062B2F0C2500E5DF1A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52E526072B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,8 @@
 				52E525DC2B2D675A00E5DF1A /* MainViewController.swift in Sources */,
 				52E525D82B2D675A00E5DF1A /* AppDelegate.swift in Sources */,
 				52E525F92B2EEA4D00E5DF1A /* WeatherView.swift in Sources */,
+				52E526082B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift in Sources */,
+				52E526052B2F0A5F00E5DF1A /* CalendarCollectionView.swift in Sources */,
 				52E525FC2B2EF3BF00E5DF1A /* Constants.swift in Sources */,
 				52E525F32B2D90CC00E5DF1A /* CalendarView.swift in Sources */,
 				52E525FF2B2F022400E5DF1A /* UIFont + ext.swift in Sources */,

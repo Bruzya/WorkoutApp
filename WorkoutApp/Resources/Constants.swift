@@ -8,10 +8,6 @@
 import Foundation
 
 struct Constants {
-    enum Fonts {
-        
-    }
-    
     enum Labels {
         static let userName = "Evgenii Mazrukho"
         static let weatherTitle = "Солнечно"
@@ -23,8 +19,5 @@ struct Constants {
         static let sun = "sun"
         static let plusButton = "plus"
     }
-    
-    
-    
     
 }
