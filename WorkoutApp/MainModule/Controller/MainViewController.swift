@@ -23,8 +23,9 @@ class MainViewController: UIViewController {
     
     private let userNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Evgenii Mazrukho"
-        label.textColor = UIColor.userName
+        label.text = Constants.Labels.userName
+        label.font = UIFont.robotoMedium16()
+        label.textColor = UIColor.labels
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
@@ -33,6 +34,7 @@ class MainViewController: UIViewController {
     }()
 
     private let calendarView = CalendarView()
+    private let weatherView = WeatherView()
     
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
@@ -43,13 +45,14 @@ class MainViewController: UIViewController {
                                               left: 20,
                                               bottom: 15,
                                               right: 0)
-        button.setTitle("Add workout", for: .normal)
+        button.setTitle(Constants.Labels.addWorkoutButton, for: .normal)
         button.titleEdgeInsets = UIEdgeInsets(top: 50,
                                               left: -40,
                                               bottom: 0,
                                               right: 0)
-        button.titleLabel?.font = .systemFont(ofSize: 12)
+        button.titleLabel?.font = UIFont.robotoMedium12()
         button.tintColor = UIColor.plusButton
+        button.addShadowOnView()
         button.addTarget(self, action: #selector(addWorkoutButtonPressed), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -89,6 +92,7 @@ private extension MainViewController {
         view.addSubview(userPhotoImageView)
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
+        view.addSubview(weatherView)
         
     }
     
@@ -104,18 +108,28 @@ private extension MainViewController {
             userPhotoImageView.widthAnchor.constraint(equalToConstant: 100),
         
             calendarView.topAnchor.constraint(equalTo: userPhotoImageView.centerYAnchor),
-            calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            calendarView.leadingAnchor.constraint(equalTo: userPhotoImageView.leadingAnchor),
             calendarView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             calendarView.heightAnchor.constraint(equalToConstant: 75),
             
             userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor, constant: 5),
-            userNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            userNameLabel.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor, constant: -10),
             
             addWorkoutButton.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
-            addWorkoutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            addWorkoutButton.heightAnchor.constraint(equalToConstant: 80),
-            addWorkoutButton.widthAnchor.constraint(equalToConstant: 80),
+            addWorkoutButton.leadingAnchor.constraint(equalTo: calendarView.leadingAnchor),
+            addWorkoutButton.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.205),
+            addWorkoutButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.205),
+            
+            weatherView.topAnchor.constraint(equalTo: addWorkoutButton.topAnchor),
+            weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
+            weatherView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
+            weatherView.heightAnchor.constraint(equalTo: addWorkoutButton.heightAnchor),
+            
+            
+            
+            
+            
         ])
     }
 }
