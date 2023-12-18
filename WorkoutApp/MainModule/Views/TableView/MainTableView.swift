@@ -9,20 +9,17 @@ import UIKit
 
 final class MainTableView: UITableView {
     
-    //MARK: - Properties
-    
     //MARK: - Lifecycle
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
         configure()
         setDelegates()
-        register(MainTableViewCell.self, forCellReuseIdentifier: "tableCell")
+        register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.idTableViewCell)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 //MARK: - Private Methods
@@ -32,9 +29,8 @@ private extension MainTableView {
         separatorStyle = .none
         bounces = false
         showsVerticalScrollIndicator = false
+        
         translatesAutoresizingMaskIntoConstraints = false
-        
-        
     }
     
     func setDelegates() {
@@ -46,11 +42,11 @@ private extension MainTableView {
 //MARK: - UITableViewDataSource
 extension MainTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? MainTableViewCell else {
+        guard let cell = dequeueReusableCell(withIdentifier: MainTableViewCell.idTableViewCell, for: indexPath) as? MainTableViewCell else {
             return UITableViewCell()
         }
         
@@ -65,7 +61,3 @@ extension MainTableView: UITableViewDelegate {
     }
     
 }
-
-
-
-

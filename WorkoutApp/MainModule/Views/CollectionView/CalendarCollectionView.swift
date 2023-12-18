@@ -11,7 +11,6 @@ final class CalendarCollectionView: UICollectionView {
     
     //MARK: - Properties
     private let collectionLayout = UICollectionViewFlowLayout()
-    private let calendarCell = CalendarCollectionViewCell()
     
     //MARK: - Lifecycle
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -20,7 +19,7 @@ final class CalendarCollectionView: UICollectionView {
         configure()
         setupLayout()
         setDelegates()
-        register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: calendarCell.id)
+        register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.idCalendarCell)
         selectItem(at: [0,6], animated: true, scrollPosition: [])
     }
     
@@ -54,7 +53,7 @@ extension CalendarCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: calendarCell.id, for: indexPath) as? CalendarCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.idCalendarCell, for: indexPath) as? CalendarCollectionViewCell else {
             return UICollectionViewCell()
         }
         

@@ -8,12 +8,15 @@
 import UIKit
 
 extension UILabel {
-    convenience init(text: String) {
+    convenience init(text: String,
+                     textColor: UIColor = UIColor.mainSubLabel,
+                     font: UIFont? = UIFont.robotoMedium14(),
+                     numberOfLines: Int = 1) {
         self.init()
         self.text = text
-        textColor = UIColor.mainSubLabel
-        font = UIFont.robotoMedium14()
-        numberOfLines = 1
+        self.textColor = textColor
+        self.font = font
+        self.numberOfLines = numberOfLines
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.5
         translatesAutoresizingMaskIntoConstraints = false

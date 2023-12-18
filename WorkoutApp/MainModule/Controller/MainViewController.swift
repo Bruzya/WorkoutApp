@@ -135,10 +135,10 @@ private extension MainViewController {
             workoutTodayLabel.leadingAnchor.constraint(equalTo: addWorkoutButton.leadingAnchor),
             workoutTodayLabel.widthAnchor.constraint(equalToConstant: 100),
             
-            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 10),
-            tableView.leadingAnchor.constraint(equalTo: calendarView.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
         ])
     }

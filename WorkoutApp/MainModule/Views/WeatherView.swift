@@ -11,29 +11,8 @@ final class WeatherView: UIView {
     
     //TODO: - refactor UILabels by constructor
     //MARK: - UI
-    private let weatherLabel: UILabel = {
-        let label = UILabel()
-        label.text = Constants.Labels.weatherTitle
-        label.textColor = UIColor.mainLabel
-        label.font = UIFont.robotoMedium18()
-        label.numberOfLines = 1
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.text = Constants.Labels.weatherDescription
-        label.textColor = UIColor.subLabel
-        label.font = UIFont.robotoMedium12()
-        label.numberOfLines = 2
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let weatherLabel = UILabel(text: Constants.Labels.weatherTitle,textColor: .mainLabel, font: .robotoMedium18())
+    private let descriptionLabel = UILabel(text: Constants.Labels.weatherDescription, textColor: .subLabel, font: .robotoMedium12(), numberOfLines: 2)
     
     private let weatherImage: UIImageView = {
         let image = UIImageView()

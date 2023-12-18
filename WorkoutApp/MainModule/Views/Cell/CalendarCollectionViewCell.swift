@@ -35,7 +35,8 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
 
     
     //MARK: - Properties
-    let id = "idCalendarCell"
+    static let idCalendarCell = "idCalendarCell"
+    
     override var isSelected: Bool {
         didSet {
             if self.isSelected {
