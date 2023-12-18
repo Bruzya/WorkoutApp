@@ -1,5 +1,5 @@
 //
-//  MainTableView.swift
+//  StatisticTableView.swift
 //  WorkoutApp
 //
 //  Created by Evgenii Mazrukho on 18.12.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainTableView: UITableView {
+final class StatisticTableView: UITableView {
     
     //MARK: - Lifecycle
     override init(frame: CGRect, style: UITableView.Style) {
@@ -15,21 +15,21 @@ final class MainTableView: UITableView {
         
         configure()
         setDelegates()
-        register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
+        register(StatisticTableViewCell.self, forCellReuseIdentifier: StatisticTableViewCell.idStatisticTableViewCell)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 //MARK: - Private Methods
-private extension MainTableView {
+private extension StatisticTableView {
     func configure() {
         backgroundColor = .none
         separatorStyle = .none
         bounces = false
         showsVerticalScrollIndicator = false
-        
         translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -40,13 +40,13 @@ private extension MainTableView {
 }
 
 //MARK: - UITableViewDataSource
-extension MainTableView: UITableViewDataSource {
+extension StatisticTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        15
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = dequeueReusableCell(withIdentifier: MainTableViewCell.idMainTableViewCell, for: indexPath) as? MainTableViewCell else {
+        guard let cell = dequeueReusableCell(withIdentifier: StatisticTableViewCell.idStatisticTableViewCell, for: indexPath) as? StatisticTableViewCell else {
             return UITableViewCell()
         }
         return cell
@@ -54,8 +54,8 @@ extension MainTableView: UITableViewDataSource {
 }
 
 //MARK: - UITableViewDelegate
-extension MainTableView: UITableViewDelegate {
+extension StatisticTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        55
     }
 }

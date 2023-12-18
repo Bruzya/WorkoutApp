@@ -24,6 +24,10 @@
 		52E5260F2B306A8500E5DF1A /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5260E2B306A8500E5DF1A /* MainTableView.swift */; };
 		52E526152B306C8100E5DF1A /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526142B306C8100E5DF1A /* MainTableViewCell.swift */; };
 		52E526172B306FD200E5DF1A /* UIStackView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526162B306FD200E5DF1A /* UIStackView + ext.swift */; };
+		52E5261D2B30B71D00E5DF1A /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5261C2B30B71D00E5DF1A /* StatisticViewController.swift */; };
+		52E526212B30B84700E5DF1A /* StatisticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526202B30B84700E5DF1A /* StatisticTableView.swift */; };
+		52E526232B30B95000E5DF1A /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526222B30B95000E5DF1A /* StatisticTableViewCell.swift */; };
+		52E526262B30CF3E00E5DF1A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526252B30CF3E00E5DF1A /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		52E5260E2B306A8500E5DF1A /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
 		52E526142B306C8100E5DF1A /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		52E526162B306FD200E5DF1A /* UIStackView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + ext.swift"; sourceTree = "<group>"; };
+		52E5261C2B30B71D00E5DF1A /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		52E526202B30B84700E5DF1A /* StatisticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableView.swift; sourceTree = "<group>"; };
+		52E526222B30B95000E5DF1A /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		52E526252B30CF3E00E5DF1A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				52E525EB2B2D678E00E5DF1A /* Application */,
+				52E526242B30CF3100E5DF1A /* NavigationModule */,
+				52E526182B30B6CB00E5DF1A /* StatisticModule */,
 				52E525F12B2D866400E5DF1A /* MainModule */,
 				52E525EF2B2D67A600E5DF1A /* Resources */,
 				52E525F02B2D67AB00E5DF1A /* SupportingFiles */,
@@ -212,6 +222,64 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		52E526182B30B6CB00E5DF1A /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				52E526192B30B6D700E5DF1A /* Model */,
+				52E5261A2B30B6E800E5DF1A /* Views */,
+				52E5261B2B30B6F200E5DF1A /* Controller */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		52E526192B30B6D700E5DF1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52E5261A2B30B6E800E5DF1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E5261E2B30B81A00E5DF1A /* TableView */,
+				52E5261F2B30B83A00E5DF1A /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52E5261B2B30B6F200E5DF1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52E5261C2B30B71D00E5DF1A /* StatisticViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E5261E2B30B81A00E5DF1A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				52E526202B30B84700E5DF1A /* StatisticTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		52E5261F2B30B83A00E5DF1A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52E526222B30B95000E5DF1A /* StatisticTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52E526242B30CF3100E5DF1A /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				52E526252B30CF3E00E5DF1A /* MainTabBarController.swift */,
+			);
+			path = NavigationModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,7 +353,9 @@
 			files = (
 				52E525F62B2D9B4000E5DF1A /* UIView + ext.swift in Sources */,
 				52E526172B306FD200E5DF1A /* UIStackView + ext.swift in Sources */,
+				52E526262B30CF3E00E5DF1A /* MainTabBarController.swift in Sources */,
 				52E525DC2B2D675A00E5DF1A /* MainViewController.swift in Sources */,
+				52E5261D2B30B71D00E5DF1A /* StatisticViewController.swift in Sources */,
 				52E525D82B2D675A00E5DF1A /* AppDelegate.swift in Sources */,
 				52E526152B306C8100E5DF1A /* MainTableViewCell.swift in Sources */,
 				52E525F92B2EEA4D00E5DF1A /* WeatherView.swift in Sources */,
@@ -296,6 +366,8 @@
 				52E525F32B2D90CC00E5DF1A /* CalendarView.swift in Sources */,
 				52E525FF2B2F022400E5DF1A /* UIFont + ext.swift in Sources */,
 				52E5260D2B3067CE00E5DF1A /* UILabel + ext.swift in Sources */,
+				52E526232B30B95000E5DF1A /* StatisticTableViewCell.swift in Sources */,
+				52E526212B30B84700E5DF1A /* StatisticTableView.swift in Sources */,
 				52E525DA2B2D675A00E5DF1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

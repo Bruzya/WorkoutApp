@@ -55,7 +55,7 @@ final class MainTableViewCell: UITableViewCell {
     private var labelsStackView = UIStackView()
     
     //MARK: - Properties
-    static let idTableViewCell = "idTableViewCell"
+    static let idMainTableViewCell = "idMainTableViewCell"
 
     //MARK: - Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -114,7 +114,7 @@ private extension MainTableViewCell {
             workoutNameLabel.leadingAnchor.constraint(equalTo: workoutBackgroundView.trailingAnchor, constant: 10),
             workoutNameLabel.trailingAnchor.constraint(equalTo: backgroundCell.trailingAnchor, constant: -10),
             
-            labelsStackView.topAnchor.constraint(equalTo: workoutNameLabel.bottomAnchor, constant: 0),
+            labelsStackView.topAnchor.constraint(equalTo: workoutNameLabel.bottomAnchor),
             labelsStackView.leadingAnchor.constraint(equalTo: workoutBackgroundView.trailingAnchor, constant: 10),
             labelsStackView.heightAnchor.constraint(equalToConstant: 20),
             
