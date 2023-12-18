@@ -14,7 +14,7 @@ final class MainViewController: UIViewController {
     //MARK: - UI
     private let userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.userPhoto
+        imageView.backgroundColor = UIColor.subLabel
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 5
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -25,7 +25,7 @@ final class MainViewController: UIViewController {
         let label = UILabel()
         label.text = Constants.Labels.userName
         label.font = UIFont.robotoMedium16()
-        label.textColor = UIColor.labels
+        label.textColor = UIColor.mainLabel
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
@@ -35,6 +35,8 @@ final class MainViewController: UIViewController {
 
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
+    private let workoutTodayLabel = UILabel(text: "Workout today")
+    private let tableView = MainTableView()
     
     //TODO: - refactor with UIButtonConfiguration
     private lazy var addWorkoutButton: UIButton = {
@@ -94,6 +96,8 @@ private extension MainViewController {
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
+        view.addSubview(workoutTodayLabel)
+        view.addSubview(tableView)
         
     }
     
@@ -127,9 +131,14 @@ private extension MainViewController {
             weatherView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
             weatherView.heightAnchor.constraint(equalTo: addWorkoutButton.heightAnchor),
             
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: addWorkoutButton.leadingAnchor),
+            workoutTodayLabel.widthAnchor.constraint(equalToConstant: 100),
             
-            
-            
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: calendarView.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
         ])
     }

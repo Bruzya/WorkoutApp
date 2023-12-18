@@ -14,7 +14,7 @@ final class WeatherView: UIView {
     private let weatherLabel: UILabel = {
         let label = UILabel()
         label.text = Constants.Labels.weatherTitle
-        label.textColor = UIColor.labels
+        label.textColor = UIColor.mainLabel
         label.font = UIFont.robotoMedium18()
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true

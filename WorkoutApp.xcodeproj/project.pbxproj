@@ -20,6 +20,10 @@
 		52E526032B2F038900E5DF1A /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E526012B2F038900E5DF1A /* Roboto-Medium.ttf */; };
 		52E526052B2F0A5F00E5DF1A /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */; };
 		52E526082B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526072B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift */; };
+		52E5260D2B3067CE00E5DF1A /* UILabel + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5260C2B3067CE00E5DF1A /* UILabel + ext.swift */; };
+		52E5260F2B306A8500E5DF1A /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5260E2B306A8500E5DF1A /* MainTableView.swift */; };
+		52E526152B306C8100E5DF1A /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526142B306C8100E5DF1A /* MainTableViewCell.swift */; };
+		52E526172B306FD200E5DF1A /* UIStackView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526162B306FD200E5DF1A /* UIStackView + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		52E526012B2F038900E5DF1A /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 		52E526072B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		52E5260C2B3067CE00E5DF1A /* UILabel + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + ext.swift"; sourceTree = "<group>"; };
+		52E5260E2B306A8500E5DF1A /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		52E526142B306C8100E5DF1A /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		52E526162B306FD200E5DF1A /* UIStackView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +106,11 @@
 		52E525ED2B2D679A00E5DF1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52E526062B2F0C2500E5DF1A /* Cell */,
-				52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */,
 				52E525F22B2D90CC00E5DF1A /* CalendarView.swift */,
 				52E525F82B2EEA4D00E5DF1A /* WeatherView.swift */,
+				52E526122B306B1E00E5DF1A /* CollectionView */,
+				52E526132B306B2300E5DF1A /* TableView */,
+				52E526062B2F0C2500E5DF1A /* Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				52E525FB2B2EF3BF00E5DF1A /* Constants.swift */,
-				52E525E02B2D675A00E5DF1A /* Assets.xcassets */,
 				52E525F42B2D9B1B00E5DF1A /* Extensions */,
 			);
 			path = Resources;
@@ -126,6 +134,7 @@
 		52E525F02B2D67AB00E5DF1A /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				52E525E02B2D675A00E5DF1A /* Assets.xcassets */,
 				52E525FA2B2EF06600E5DF1A /* Fonts */,
 				52E525E52B2D675A00E5DF1A /* Info.plist */,
 			);
@@ -145,6 +154,7 @@
 		52E525F42B2D9B1B00E5DF1A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52E526092B30674300E5DF1A /* Unique */,
 				52E525FD2B2F01F100E5DF1A /* UIKit */,
 			);
 			path = Extensions;
@@ -164,6 +174,8 @@
 			children = (
 				52E525F52B2D9B4000E5DF1A /* UIView + ext.swift */,
 				52E525FE2B2F022400E5DF1A /* UIFont + ext.swift */,
+				52E5260C2B3067CE00E5DF1A /* UILabel + ext.swift */,
+				52E526162B306FD200E5DF1A /* UIStackView + ext.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -172,8 +184,32 @@
 			isa = PBXGroup;
 			children = (
 				52E526072B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift */,
+				52E526142B306C8100E5DF1A /* MainTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		52E526092B30674300E5DF1A /* Unique */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unique;
+			sourceTree = "<group>";
+		};
+		52E526122B306B1E00E5DF1A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				52E526042B2F0A5F00E5DF1A /* CalendarCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		52E526132B306B2300E5DF1A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				52E5260E2B306A8500E5DF1A /* MainTableView.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,14 +284,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E525F62B2D9B4000E5DF1A /* UIView + ext.swift in Sources */,
+				52E526172B306FD200E5DF1A /* UIStackView + ext.swift in Sources */,
 				52E525DC2B2D675A00E5DF1A /* MainViewController.swift in Sources */,
 				52E525D82B2D675A00E5DF1A /* AppDelegate.swift in Sources */,
+				52E526152B306C8100E5DF1A /* MainTableViewCell.swift in Sources */,
 				52E525F92B2EEA4D00E5DF1A /* WeatherView.swift in Sources */,
 				52E526082B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift in Sources */,
 				52E526052B2F0A5F00E5DF1A /* CalendarCollectionView.swift in Sources */,
+				52E5260F2B306A8500E5DF1A /* MainTableView.swift in Sources */,
 				52E525FC2B2EF3BF00E5DF1A /* Constants.swift in Sources */,
 				52E525F32B2D90CC00E5DF1A /* CalendarView.swift in Sources */,
 				52E525FF2B2F022400E5DF1A /* UIFont + ext.swift in Sources */,
+				52E5260D2B3067CE00E5DF1A /* UILabel + ext.swift in Sources */,
 				52E525DA2B2D675A00E5DF1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

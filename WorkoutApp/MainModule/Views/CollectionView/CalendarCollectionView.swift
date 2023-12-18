@@ -21,6 +21,7 @@ final class CalendarCollectionView: UICollectionView {
         setupLayout()
         setDelegates()
         register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: calendarCell.id)
+        selectItem(at: [0,6], animated: true, scrollPosition: [])
     }
     
     required init?(coder: NSCoder) {
