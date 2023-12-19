@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SliderViewProtocol: AnyObject {
+    func changeValue(type: SliderType, value: Int)
+}
+
 final class SliderView: UIView {
     
     //MARK: - UI
@@ -21,16 +25,38 @@ final class SliderView: UIView {
     private lazy var slider = GreenSlider()
     private var sliderStackView = UIStackView()
     
+    //MARK: - Properties
+    private var sliderType: SliderType?
+    weak var delegate: SliderViewProtocol?
+    
+    var isActive: Bool = true {
+        didSet {
+            if isActive {
+                nameLabel.alpha = 1
+                numberLabel.alpha = 1
+                slider.alpha = 1
+            } else {
+                nameLabel.alpha = 0.5
+                numberLabel.alpha = 0.5
+                slider.alpha = 0.5
+                slider.value = 0
+                numberLabel.text = "0"
+            }
+        }
+    }
+    
     //MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
     }
     
-    convenience init(name: String, minValue: Float = 0, maxValue: Float) {
+    convenience init(name: String, minValue: Float = 0, maxValue: Float, type: SliderType) {
         self.init()
         
+        sliderType = type
+        
         configure()
-        setupViews(name: name, minValue: minValue, maxValue: minValue)
+        setupViews(name: name, minValue: minValue, maxValue: maxValue)
         setConstraints()
     }
     
@@ -60,8 +86,18 @@ private extension SliderView {
         nameLabel.text = name
         slider.minimumValue = minValue
         slider.maximumValue = maxValue
+        slider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
+        
         configureStackViews()
         addSubview(sliderStackView)
+    }
+    
+    
+    @objc func sliderChanged() {
+        let intValueSlider = Int(slider.value)
+        numberLabel.text = sliderType == .timer ? intValueSlider.getTimeFromSecond() : "\(intValueSlider)"
+        guard let type = sliderType else { return }
+        delegate?.changeValue(type: type, value: intValueSlider)
     }
     
     func setConstraints() {
