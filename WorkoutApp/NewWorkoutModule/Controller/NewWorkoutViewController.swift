@@ -45,9 +45,9 @@ private extension NewWorkoutViewController {
                                        axis: .vertical, spacing: 10)
         
         nameView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        selectImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        selectImageView.heightAnchor.constraint(equalToConstant: 105).isActive = true
         dateView.heightAnchor.constraint(equalToConstant: 115).isActive = true
-        repeatsView.heightAnchor.constraint(equalToConstant: 280).isActive = true
+        repeatsView.heightAnchor.constraint(equalToConstant: 290).isActive = true
     }
     
     func setupViews() {

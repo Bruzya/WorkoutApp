@@ -62,16 +62,16 @@ private extension NewWorkoutCollectionViewCell {
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            imageBackgroundView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            imageBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            imageBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            imageBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            imageBackgroundView.topAnchor.constraint(equalTo: topAnchor, constant: 7),
+            imageBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            imageBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7),
             
             
-            workoutImageView.topAnchor.constraint(equalTo: imageBackgroundView.topAnchor, constant: 10),
-            workoutImageView.leadingAnchor.constraint(equalTo: imageBackgroundView.leadingAnchor, constant: 10),
-            workoutImageView.trailingAnchor.constraint(equalTo: imageBackgroundView.trailingAnchor, constant: -10),
-            workoutImageView.bottomAnchor.constraint(equalTo: imageBackgroundView.bottomAnchor, constant: -10)
+            workoutImageView.topAnchor.constraint(equalTo: imageBackgroundView.topAnchor, constant: 5),
+            workoutImageView.leadingAnchor.constraint(equalTo: imageBackgroundView.leadingAnchor, constant: 5),
+            workoutImageView.trailingAnchor.constraint(equalTo: imageBackgroundView.trailingAnchor, constant: -5),
+            workoutImageView.bottomAnchor.constraint(equalTo: imageBackgroundView.bottomAnchor, constant: -5)
         ])
     }
 }
