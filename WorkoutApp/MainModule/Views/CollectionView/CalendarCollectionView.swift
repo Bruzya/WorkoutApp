@@ -20,13 +20,11 @@ final class CalendarCollectionView: UICollectionView {
         setupLayout()
         setDelegates()
         register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: CalendarCollectionViewCell.idCalendarCell)
-        selectItem(at: [0,6], animated: true, scrollPosition: [])
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 //MARK: - Private Methods
@@ -56,7 +54,6 @@ extension CalendarCollectionView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.idCalendarCell, for: indexPath) as? CalendarCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
         return cell
     }
 }
@@ -67,7 +64,6 @@ extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
         CGSize(width: collectionView.frame.width / 8,
                height: collectionView.frame.height)
     }
-    
 }
 
 //MARK: - UICollectionViewDelegate
@@ -76,7 +72,3 @@ extension CalendarCollectionView: UICollectionViewDelegate {
         print("cell did tapped \(indexPath)")
     }
 }
-
-
-
-

@@ -10,21 +10,10 @@ import UIKit
 final class MainTableViewCell: UITableViewCell {
     
     //MARK: - UI
-    private let backgroundCell: UIView = {
-        let view = UIView()
-         view.layer.cornerRadius = 20
-         view.backgroundColor = UIColor.cellBackground
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    private let workoutBackgroundView: UIView = {
-       let view = UIView()
-        view.layer.cornerRadius = 20
-        view.backgroundColor = UIColor.mainBackground
-       view.translatesAutoresizingMaskIntoConstraints = false
-       return view
-   }()
+    private let backgroundCell = BackgroundView(backgroundColor: .cellBackground,
+                                                cornerRadius: 20)
+    private let workoutBackgroundView = BackgroundView(backgroundColor: .mainBackground,
+                                                       cornerRadius: 20)
     
     private let workoutImageView: UIImageView = {
         let image = UIImageView()

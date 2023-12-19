@@ -11,28 +11,12 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
     
     //TODO: - refactor UI
     //MARK: - UI
-    private let dayOfWeeklabel: UILabel = {
-        let label = UILabel()
-        label.text = "We"
-        label.font = UIFont.robotoBold16()
-        label.textColor = .white
-        label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private let numberOfDaylabel: UILabel = {
-        let label = UILabel()
-        label.text = "22"
-        label.font = UIFont.robotoBold20()
-        label.textColor = .white
-        label.textAlignment = .center
-        label.adjustsFontSizeToFitWidth = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
+    private let dayOfWeekLabel = UILabel(text: "We",
+                                         textColor: .white,
+                                         font: .robotoBold16())
+    private let numberOfDayLabel = UILabel(text: "22",
+                                         textColor: .white,
+                                         font: .robotoBold20())
     
     //MARK: - Properties
     static let idCalendarCell = "idCalendarCell"
@@ -41,12 +25,12 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
         didSet {
             if self.isSelected {
                 backgroundColor = UIColor.mainYellow
-                dayOfWeeklabel.textColor = UIColor.mainDarkGray
-                numberOfDaylabel.textColor = UIColor.mainDarkGreen
+                dayOfWeekLabel.textColor = UIColor.mainDarkGray
+                numberOfDayLabel.textColor = UIColor.mainDarkGreen
             } else {
                 backgroundColor = UIColor.mainGreen
-                dayOfWeeklabel.textColor = .white
-                numberOfDaylabel.textColor = .white
+                dayOfWeekLabel.textColor = .white
+                numberOfDayLabel.textColor = .white
             }
         }
     }
@@ -55,6 +39,7 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
+        configure()
         setupViews()
         setConstraints()
     }
@@ -66,22 +51,27 @@ final class CalendarCollectionViewCell: UICollectionViewCell {
 
 //MARK: - private Methods
 private extension CalendarCollectionViewCell {
-    func setupViews() {
+    func configure() {
         layer.cornerRadius = 10
+    }
+    
+    func setupViews() {
+        dayOfWeekLabel.textAlignment = .center
+        numberOfDayLabel.textAlignment = .center
         
-        addSubview(dayOfWeeklabel)
-        addSubview(numberOfDaylabel)
+        addSubview(dayOfWeekLabel)
+        addSubview(numberOfDayLabel)
     }
     
     func setConstraints() {
         NSLayoutConstraint.activate([
-            dayOfWeeklabel.topAnchor.constraint(equalTo: topAnchor, constant: 7),
-            dayOfWeeklabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            dayOfWeeklabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            dayOfWeekLabel.topAnchor.constraint(equalTo: topAnchor, constant: 7),
+            dayOfWeekLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            dayOfWeekLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             
-            numberOfDaylabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            numberOfDaylabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            numberOfDaylabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7),
+            numberOfDayLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            numberOfDayLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            numberOfDayLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7),
         ])
     }
 }

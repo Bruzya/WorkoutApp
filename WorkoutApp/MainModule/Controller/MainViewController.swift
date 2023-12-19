@@ -21,18 +21,11 @@ final class MainViewController: UIViewController {
         return imageView
     }()
     
-    private let userNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = Constants.Labels.userName
-        label.font = UIFont.robotoMedium16()
-        label.textColor = UIColor.mainLabel
-        label.numberOfLines = 2
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.5
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
+    private let userNameLabel = UILabel(text: "Evgenii Mazrukho",
+                                        textColor: .mainLabel,
+                                        font: .robotoMedium16(),
+                                        numberOfLines: 2)
+    
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
     private let workoutTodayLabel = UILabel(text: "Workout today")
@@ -80,6 +73,7 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
         setupViews()
         setConstraints()
     }
@@ -87,9 +81,11 @@ final class MainViewController: UIViewController {
 
 //MARK: - Private Methods
 private extension MainViewController {
-    func setupViews() {
+    func configure() {
         view.backgroundColor = UIColor.mainBackground
-        
+    }
+    
+    func setupViews() {
         //TODO: - StackView
         view.addSubview(calendarView)
         view.addSubview(userPhotoImageView)
@@ -102,7 +98,9 @@ private extension MainViewController {
     }
     
     @objc func addWorkoutButtonPressed() {
-        
+        let newWorkoutViewController = NewWorkoutViewController()
+        newWorkoutViewController.modalPresentationStyle = .fullScreen
+        present(newWorkoutViewController, animated: true)
     }
     
     func setConstraints() {
@@ -138,8 +136,7 @@ private extension MainViewController {
             tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }

@@ -20,4 +20,30 @@ struct Constants {
         static let plusButton = "plus"
     }
     
+    enum TabBar {
+        enum Images {
+            static let mainImage = ""
+            static let statisticImage = ""
+            static let profileImage = ""
+        }
+        
+        enum Titles {
+            static let mainTitle = ""
+            static let statisticTitle = ""
+            static let profileTitle = ""
+            
+        }
+    }
+    
+    enum TableView {
+        static let mainCell = ""
+        static let statisticCell = ""
+        
+        
+    }
+    
+    enum CollectionView {
+        static let mainCell = ""
+    }
+    
 }

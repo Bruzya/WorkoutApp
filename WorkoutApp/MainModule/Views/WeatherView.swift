@@ -11,8 +11,13 @@ final class WeatherView: UIView {
     
     //TODO: - refactor UILabels by constructor
     //MARK: - UI
-    private let weatherLabel = UILabel(text: Constants.Labels.weatherTitle,textColor: .mainLabel, font: .robotoMedium18())
-    private let descriptionLabel = UILabel(text: Constants.Labels.weatherDescription, textColor: .subLabel, font: .robotoMedium12(), numberOfLines: 2)
+    private let weatherLabel = UILabel(text: Constants.Labels.weatherTitle,
+                                       textColor: .mainLabel,
+                                       font: .robotoMedium18())
+    private let descriptionLabel = UILabel(text: Constants.Labels.weatherDescription,
+                                           textColor: .subLabel,
+                                           font: .robotoMedium12(),
+                                           numberOfLines: 2)
     
     private let weatherImage: UIImageView = {
         let image = UIImageView()
@@ -22,13 +27,11 @@ final class WeatherView: UIView {
         return image
     }()
     
-    //MARK: - Properties
-    
-    
     //MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
+        configure()
         setupViews()
         setConstraints()
     }
@@ -40,12 +43,14 @@ final class WeatherView: UIView {
 
 //MARK: - private Methods
 private extension WeatherView {
-    func setupViews() {
+    func configure() {
         backgroundColor = .weatherViewBackground
         layer.cornerRadius = 10
         translatesAutoresizingMaskIntoConstraints = false
         addShadowOnView()
-        
+    }
+    
+    func setupViews() {
         addSubview(weatherLabel)
         addSubview(descriptionLabel)
         addSubview(weatherImage)
@@ -65,10 +70,7 @@ private extension WeatherView {
             descriptionLabel.topAnchor.constraint(equalTo: weatherLabel.bottomAnchor, constant: 5),
             descriptionLabel.leadingAnchor.constraint(equalTo: weatherLabel.leadingAnchor),
             descriptionLabel.trailingAnchor.constraint(equalTo: weatherLabel.trailingAnchor),
-            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            
-            
-            
+            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
 }

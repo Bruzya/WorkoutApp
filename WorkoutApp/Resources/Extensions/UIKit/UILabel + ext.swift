@@ -21,4 +21,13 @@ extension UILabel {
         minimumScaleFactor = 0.5
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    convenience init(titleText: String) {
+        self.init()
+        text = titleText
+        textColor = UIColor.mainLabel
+        font = UIFont.robotoMedium24()
+        textAlignment = .center
+        translatesAutoresizingMaskIntoConstraints = false
+    }
 }

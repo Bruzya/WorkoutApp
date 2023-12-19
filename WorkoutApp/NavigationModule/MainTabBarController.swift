@@ -24,7 +24,7 @@ private extension MainTabBarController {
         tabBar.backgroundColor = .tabBar
         tabBar.tintColor = .mainDarkGreen
         tabBar.unselectedItemTintColor = .mainLabel
-        tabBar.layer.borderWidth = 1
+        tabBar.layer.borderWidth = 0.5
         tabBar.layer.borderColor = UIColor.tabBarBorder.cgColor
     }
     
@@ -43,5 +43,4 @@ private extension MainTabBarController {
         
         UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.robotoBold12() as Any], for: .normal)
     }
-    
 }

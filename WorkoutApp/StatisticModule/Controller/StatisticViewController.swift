@@ -7,19 +7,10 @@
 
 import UIKit
 
-class StatisticViewController: UIViewController {
+final class StatisticViewController: UIViewController {
     
     //MARK: - UI
-    private let statisticLabel: UILabel = {
-        let label = UILabel()
-        label.text = "STATISTIC"
-        label.textColor = UIColor.mainLabel
-        label.font = UIFont.robotoMedium24()
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
+    private let statisticLabel = UILabel(titleText: "STATISTIC")
     
     private lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: ["Week", "Month"])
@@ -43,6 +34,7 @@ class StatisticViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
         setupViews()
         setConstraints()
     }
@@ -50,9 +42,11 @@ class StatisticViewController: UIViewController {
 
 //MARK: - private Methods
 private extension StatisticViewController {
-    func setupViews() {
+    func configure() {
         view.backgroundColor = .mainBackground
-        
+    }
+    
+    func setupViews() {
         view.addSubview(statisticLabel)
         view.addSubview(segmentedControl)
         view.addSubview(exercisesLabel)

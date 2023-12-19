@@ -28,6 +28,16 @@
 		52E526212B30B84700E5DF1A /* StatisticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526202B30B84700E5DF1A /* StatisticTableView.swift */; };
 		52E526232B30B95000E5DF1A /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526222B30B95000E5DF1A /* StatisticTableViewCell.swift */; };
 		52E526262B30CF3E00E5DF1A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526252B30CF3E00E5DF1A /* MainTabBarController.swift */; };
+		52E5262C2B31726000E5DF1A /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5262B2B31726000E5DF1A /* NewWorkoutViewController.swift */; };
+		52E5262E2B31766B00E5DF1A /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5262D2B31766B00E5DF1A /* CloseButton.swift */; };
+		52E526302B31793A00E5DF1A /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5262F2B31793A00E5DF1A /* NameView.swift */; };
+		52E526322B31795400E5DF1A /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526312B31795400E5DF1A /* DateView.swift */; };
+		52E526342B31973500E5DF1A /* RepeatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526332B31973500E5DF1A /* RepeatsView.swift */; };
+		52E526362B319AF000E5DF1A /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526352B319AF000E5DF1A /* SliderView.swift */; };
+		52E526382B31B75600E5DF1A /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526372B31B75600E5DF1A /* GreenButton.swift */; };
+		52E5263A2B31B89100E5DF1A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526392B31B89100E5DF1A /* BackgroundView.swift */; };
+		52E5263C2B31C29A00E5DF1A /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5263B2B31C29A00E5DF1A /* BrownTextField.swift */; };
+		52E5263F2B31CD2800E5DF1A /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5263E2B31CD2800E5DF1A /* GreenSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +64,16 @@
 		52E526202B30B84700E5DF1A /* StatisticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableView.swift; sourceTree = "<group>"; };
 		52E526222B30B95000E5DF1A /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		52E526252B30CF3E00E5DF1A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		52E5262B2B31726000E5DF1A /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		52E5262D2B31766B00E5DF1A /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		52E5262F2B31793A00E5DF1A /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		52E526312B31795400E5DF1A /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		52E526332B31973500E5DF1A /* RepeatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatsView.swift; sourceTree = "<group>"; };
+		52E526352B319AF000E5DF1A /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		52E526372B31B75600E5DF1A /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		52E526392B31B89100E5DF1A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		52E5263B2B31C29A00E5DF1A /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		52E5263E2B31CD2800E5DF1A /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +108,9 @@
 			children = (
 				52E525EB2B2D678E00E5DF1A /* Application */,
 				52E526242B30CF3100E5DF1A /* NavigationModule */,
-				52E526182B30B6CB00E5DF1A /* StatisticModule */,
 				52E525F12B2D866400E5DF1A /* MainModule */,
+				52E526272B31722500E5DF1A /* NewWorkoutModule */,
+				52E526182B30B6CB00E5DF1A /* StatisticModule */,
 				52E525EF2B2D67A600E5DF1A /* Resources */,
 				52E525F02B2D67AB00E5DF1A /* SupportingFiles */,
 			);
@@ -202,6 +223,11 @@
 		52E526092B30674300E5DF1A /* Unique */ = {
 			isa = PBXGroup;
 			children = (
+				52E526392B31B89100E5DF1A /* BackgroundView.swift */,
+				52E526372B31B75600E5DF1A /* GreenButton.swift */,
+				52E5262D2B31766B00E5DF1A /* CloseButton.swift */,
+				52E5263B2B31C29A00E5DF1A /* BrownTextField.swift */,
+				52E5263E2B31CD2800E5DF1A /* GreenSlider.swift */,
 			);
 			path = Unique;
 			sourceTree = "<group>";
@@ -280,6 +306,50 @@
 			path = NavigationModule;
 			sourceTree = "<group>";
 		};
+		52E526272B31722500E5DF1A /* NewWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				52E5262A2B31725100E5DF1A /* Model */,
+				52E526292B31724D00E5DF1A /* Views */,
+				52E526282B31724400E5DF1A /* Controller */,
+			);
+			path = NewWorkoutModule;
+			sourceTree = "<group>";
+		};
+		52E526282B31724400E5DF1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52E5262B2B31726000E5DF1A /* NewWorkoutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E526292B31724D00E5DF1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E5263D2B31CCD600E5DF1A /* Subviews */,
+				52E5262F2B31793A00E5DF1A /* NameView.swift */,
+				52E526312B31795400E5DF1A /* DateView.swift */,
+				52E526332B31973500E5DF1A /* RepeatsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52E5262A2B31725100E5DF1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52E5263D2B31CCD600E5DF1A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				52E526352B319AF000E5DF1A /* SliderView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,13 +423,21 @@
 			files = (
 				52E525F62B2D9B4000E5DF1A /* UIView + ext.swift in Sources */,
 				52E526172B306FD200E5DF1A /* UIStackView + ext.swift in Sources */,
+				52E526302B31793A00E5DF1A /* NameView.swift in Sources */,
 				52E526262B30CF3E00E5DF1A /* MainTabBarController.swift in Sources */,
+				52E5263F2B31CD2800E5DF1A /* GreenSlider.swift in Sources */,
+				52E526342B31973500E5DF1A /* RepeatsView.swift in Sources */,
 				52E525DC2B2D675A00E5DF1A /* MainViewController.swift in Sources */,
 				52E5261D2B30B71D00E5DF1A /* StatisticViewController.swift in Sources */,
+				52E5262C2B31726000E5DF1A /* NewWorkoutViewController.swift in Sources */,
+				52E526322B31795400E5DF1A /* DateView.swift in Sources */,
+				52E526362B319AF000E5DF1A /* SliderView.swift in Sources */,
 				52E525D82B2D675A00E5DF1A /* AppDelegate.swift in Sources */,
 				52E526152B306C8100E5DF1A /* MainTableViewCell.swift in Sources */,
 				52E525F92B2EEA4D00E5DF1A /* WeatherView.swift in Sources */,
+				52E5263A2B31B89100E5DF1A /* BackgroundView.swift in Sources */,
 				52E526082B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift in Sources */,
+				52E5262E2B31766B00E5DF1A /* CloseButton.swift in Sources */,
 				52E526052B2F0A5F00E5DF1A /* CalendarCollectionView.swift in Sources */,
 				52E5260F2B306A8500E5DF1A /* MainTableView.swift in Sources */,
 				52E525FC2B2EF3BF00E5DF1A /* Constants.swift in Sources */,
@@ -367,8 +445,10 @@
 				52E525FF2B2F022400E5DF1A /* UIFont + ext.swift in Sources */,
 				52E5260D2B3067CE00E5DF1A /* UILabel + ext.swift in Sources */,
 				52E526232B30B95000E5DF1A /* StatisticTableViewCell.swift in Sources */,
+				52E526382B31B75600E5DF1A /* GreenButton.swift in Sources */,
 				52E526212B30B84700E5DF1A /* StatisticTableView.swift in Sources */,
 				52E525DA2B2D675A00E5DF1A /* SceneDelegate.swift in Sources */,
+				52E5263C2B31C29A00E5DF1A /* BrownTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

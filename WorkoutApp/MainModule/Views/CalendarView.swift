@@ -16,6 +16,7 @@ final class CalendarView: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
+        configure()
         setupViews()
         setConstraints()
     }
@@ -27,11 +28,13 @@ final class CalendarView: UIView {
 
 //MARK: - private Methods
 private extension CalendarView {
-    func setupViews() {
+    func configure() {
         backgroundColor = UIColor.mainGreen
         layer.cornerRadius = 10
         translatesAutoresizingMaskIntoConstraints = false
-        
+    }
+    
+    func setupViews() {
         addSubview(collectionView)
     }
     
@@ -40,7 +43,7 @@ private extension CalendarView {
             collectionView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 105),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
         ])
     }
 }

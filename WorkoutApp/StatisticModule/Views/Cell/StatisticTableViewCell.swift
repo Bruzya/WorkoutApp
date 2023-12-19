@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StatisticTableViewCell: UITableViewCell {
+final class StatisticTableViewCell: UITableViewCell {
     
     //MARK: - UI
     private let differenceLabel = UILabel(text: "+2",
@@ -37,6 +37,7 @@ class StatisticTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        configure()
         setupViews()
         setConstraints()
     }
@@ -48,10 +49,12 @@ class StatisticTableViewCell: UITableViewCell {
 
 //MARK: - private Methods
 private extension StatisticTableViewCell {
-    func setupViews() {
+    func configure() {
         backgroundColor = .clear
         selectionStyle = .none
-        
+    }
+    
+    func setupViews() {
         addSubview(differenceLabel)
         addSubview(exercisesNameLabel)
         

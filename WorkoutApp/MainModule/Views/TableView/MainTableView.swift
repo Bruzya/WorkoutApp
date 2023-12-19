@@ -17,6 +17,7 @@ final class MainTableView: UITableView {
         setDelegates()
         register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.idMainTableViewCell)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -29,7 +30,6 @@ private extension MainTableView {
         separatorStyle = .none
         bounces = false
         showsVerticalScrollIndicator = false
-        
         translatesAutoresizingMaskIntoConstraints = false
     }
     
