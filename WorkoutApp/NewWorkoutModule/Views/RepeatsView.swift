@@ -46,7 +46,7 @@ private extension RepeatsView {
                                                          chooseLabel,
                                                          repsView,
                                                          timerView],
-                                       axis: .vertical, spacing: 20)
+                                       axis: .vertical, spacing: 5)
         slidersStackView.distribution = .equalSpacing
     }
     
@@ -70,7 +70,7 @@ private extension RepeatsView {
             backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            slidersStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 15),
+            slidersStackView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: 10),
             slidersStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 15),
             slidersStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -15)
         ])

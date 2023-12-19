@@ -18,7 +18,7 @@ final class MainTableViewCell: UITableViewCell {
     private let workoutImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
-        image.image = UIImage(named: "testWorkout")?.withRenderingMode(.alwaysTemplate)
+        image.image = UIImage(named: "default")?.withRenderingMode(.alwaysTemplate)
         image.tintColor = .black
         image.translatesAutoresizingMaskIntoConstraints = false
         return image

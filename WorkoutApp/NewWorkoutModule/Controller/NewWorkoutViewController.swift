@@ -15,6 +15,7 @@ final class NewWorkoutViewController: UIViewController {
     private let nameView = NameView()
     private let dateView = DateView()
     private let repeatsView = RepeatsView()
+    private let selectImageView = SelectImageView()
     private lazy var saveButton = GreenButton(text: "SAVE")
     
     private var workoutStackView = UIStackView()
@@ -38,13 +39,15 @@ private extension NewWorkoutViewController {
     
     func configureStackView() {
         workoutStackView = UIStackView(arrangedSubviews: [nameView,
+                                                          selectImageView,
                                                          dateView,
                                                          repeatsView],
-                                       axis: .vertical, spacing: 20)
+                                       axis: .vertical, spacing: 10)
         
         nameView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        selectImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         dateView.heightAnchor.constraint(equalToConstant: 115).isActive = true
-        repeatsView.heightAnchor.constraint(equalToConstant: 340).isActive = true
+        repeatsView.heightAnchor.constraint(equalToConstant: 280).isActive = true
     }
     
     func setupViews() {

@@ -40,6 +40,9 @@
 		52E5263F2B31CD2800E5DF1A /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5263E2B31CD2800E5DF1A /* GreenSlider.swift */; };
 		52E526422B31E8FE00E5DF1A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 52E526412B31E8FE00E5DF1A /* Realm */; };
 		52E526442B31E8FE00E5DF1A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52E526432B31E8FE00E5DF1A /* RealmSwift */; };
+		52E526492B31F32500E5DF1A /* NewWorkoutCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E526482B31F32500E5DF1A /* NewWorkoutCollectionView.swift */; };
+		52E5264B2B31F34300E5DF1A /* NewWorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5264A2B31F34300E5DF1A /* NewWorkoutCollectionViewCell.swift */; };
+		52E5264D2B31FA6100E5DF1A /* SelectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5264C2B31FA6100E5DF1A /* SelectImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		52E526392B31B89100E5DF1A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		52E5263B2B31C29A00E5DF1A /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
 		52E5263E2B31CD2800E5DF1A /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
+		52E526482B31F32500E5DF1A /* NewWorkoutCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutCollectionView.swift; sourceTree = "<group>"; };
+		52E5264A2B31F34300E5DF1A /* NewWorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		52E5264C2B31FA6100E5DF1A /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,8 +337,11 @@
 		52E526292B31724D00E5DF1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52E526452B31F2FA00E5DF1A /* CollectionView */,
+				52E526462B31F30600E5DF1A /* Cell */,
 				52E5263D2B31CCD600E5DF1A /* Subviews */,
 				52E5262F2B31793A00E5DF1A /* NameView.swift */,
+				52E5264C2B31FA6100E5DF1A /* SelectImageView.swift */,
 				52E526312B31795400E5DF1A /* DateView.swift */,
 				52E526332B31973500E5DF1A /* RepeatsView.swift */,
 			);
@@ -352,6 +361,22 @@
 				52E526352B319AF000E5DF1A /* SliderView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		52E526452B31F2FA00E5DF1A /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				52E526482B31F32500E5DF1A /* NewWorkoutCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		52E526462B31F30600E5DF1A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52E5264A2B31F34300E5DF1A /* NewWorkoutCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +459,8 @@
 			files = (
 				52E525F62B2D9B4000E5DF1A /* UIView + ext.swift in Sources */,
 				52E526172B306FD200E5DF1A /* UIStackView + ext.swift in Sources */,
+				52E526492B31F32500E5DF1A /* NewWorkoutCollectionView.swift in Sources */,
+				52E5264B2B31F34300E5DF1A /* NewWorkoutCollectionViewCell.swift in Sources */,
 				52E526302B31793A00E5DF1A /* NameView.swift in Sources */,
 				52E526262B30CF3E00E5DF1A /* MainTabBarController.swift in Sources */,
 				52E5263F2B31CD2800E5DF1A /* GreenSlider.swift in Sources */,
@@ -448,6 +475,7 @@
 				52E525F92B2EEA4D00E5DF1A /* WeatherView.swift in Sources */,
 				52E5263A2B31B89100E5DF1A /* BackgroundView.swift in Sources */,
 				52E526082B2F0C2D00E5DF1A /* CalendarCollectionViewCell.swift in Sources */,
+				52E5264D2B31FA6100E5DF1A /* SelectImageView.swift in Sources */,
 				52E5262E2B31766B00E5DF1A /* CloseButton.swift in Sources */,
 				52E526052B2F0A5F00E5DF1A /* CalendarCollectionView.swift in Sources */,
 				52E5260F2B306A8500E5DF1A /* MainTableView.swift in Sources */,
