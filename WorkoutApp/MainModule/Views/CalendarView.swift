@@ -24,6 +24,11 @@ final class CalendarView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - open Methods
+    func setDelegates(_ delegate: CalendarViewProtol) {
+        collectionView.calendarDelegate = delegate
+    }
 }
 
 //MARK: - private Methods

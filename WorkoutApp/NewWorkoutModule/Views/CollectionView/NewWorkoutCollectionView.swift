@@ -11,7 +11,7 @@ final class NewWorkoutCollectionView: UICollectionView {
     
     //MARK: - Properties
     private let collectionLayout = UICollectionViewFlowLayout()
-    private let exercises = [UIImage(named: "default"),]
+    private let exercises = ["default", "biceps", "body", "oclock", "dumbbell", "kettlebell"]
     
     //MARK: - Lifecycle
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -53,13 +53,16 @@ private extension NewWorkoutCollectionView {
 //MARK: - UICollectionViewDataSource
 extension NewWorkoutCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
+        exercises.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = dequeueReusableCell(withReuseIdentifier: NewWorkoutCollectionViewCell.idNewWorkoutCell, for: indexPath) as? NewWorkoutCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
+        cell.getImage(image: exercises[indexPath.row])
+        
         return cell
     }
 }

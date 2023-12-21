@@ -49,6 +49,16 @@ final class DateView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - open Methods
+    func getDateAndRepeat() -> (date: Date, isRepeat: Bool) {
+        (datePicker.date, repeatSwitch.isOn)
+    }
+    
+    func resetDataAndRepeat() {
+        datePicker.date = Date()
+        repeatSwitch.isOn = true
+    }
 }
 
 //MARK: - private Methods

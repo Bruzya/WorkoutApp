@@ -63,6 +63,13 @@ final class SliderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - open Methods
+    func resetValues() {
+        numberLabel.text = "0"
+        slider.value = 0
+        isActive = true
+    }
 }
 
 //MARK: - private Methods

@@ -14,6 +14,7 @@ final class BrownTextField: UITextField {
         super.init(frame: .zero)
         
         configure()
+        setDelegates()
     }
     
     required init?(coder: NSCoder) {
@@ -23,6 +24,10 @@ final class BrownTextField: UITextField {
 
 //MARK: - private Methods
 private extension BrownTextField {
+    func setDelegates() {
+        delegate = self
+    }
+    
     func configure() {
             backgroundColor = .cellBackground
             layer.cornerRadius = 10
@@ -34,5 +39,13 @@ private extension BrownTextField {
             clearButtonMode = .always
             returnKeyType = .done
             translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+
+//MARK: - UITextFieldDelegate
+extension BrownTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
     }
 }

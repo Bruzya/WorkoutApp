@@ -25,6 +25,17 @@ final class NameView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    //MARK: - open Methods
+    func getNameTextFieldText() -> String {
+        guard let text = nameTextField.text else { return "" }
+        return text
+    }
+    
+    func deleteTextFieldName() {
+        nameTextField.text = ""
+    }
 }
 
 //MARK: - private Methods

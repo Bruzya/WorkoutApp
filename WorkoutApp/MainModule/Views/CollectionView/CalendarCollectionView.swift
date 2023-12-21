@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol CalendarViewProtol: AnyObject {
+    func selectItem(date: Date)
+}
+
 final class CalendarCollectionView: UICollectionView {
     
     //MARK: - Properties
+    weak var calendarDelegate: CalendarViewProtol?
+    
     private let collectionLayout = UICollectionViewFlowLayout()
     
     //MARK: - Lifecycle
@@ -54,6 +60,13 @@ extension CalendarCollectionView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.idCalendarCell, for: indexPath) as? CalendarCollectionViewCell else {
             return UICollectionViewCell()
         }
+        let dateTimeZone = Date()
+        let weekArray = dateTimeZone.getWeekArray()
+        cell.dateForCell(numberOfDay: weekArray[1][indexPath.row], dayOfWeek: weekArray[0][indexPath.row])
+        if indexPath.item == 6 {
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        }
+        
         return cell
     }
 }
@@ -69,6 +82,8 @@ extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
 //MARK: - UICollectionViewDelegate
 extension CalendarCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("cell did tapped \(indexPath)")
+        let dateTimeZone = Date()
+        let date = dateTimeZone.offsetDay(day: 6 - indexPath.item)
+        calendarDelegate?.selectItem(date: date)
     }
 }

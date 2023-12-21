@@ -79,6 +79,13 @@ final class MainViewController: UIViewController {
     }
 }
 
+//MARK: - CalendarViewProtocol
+extension MainViewController: CalendarViewProtol {
+    func selectItem(date: Date) {
+        print(date)
+    }
+}
+
 //MARK: - Private Methods
 private extension MainViewController {
     func configure() {
@@ -88,6 +95,8 @@ private extension MainViewController {
     func setupViews() {
         //TODO: - StackView
         view.addSubview(calendarView)
+        calendarView.setDelegates(self)
+        
         view.addSubview(userPhotoImageView)
         view.addSubview(userNameLabel)
         view.addSubview(addWorkoutButton)

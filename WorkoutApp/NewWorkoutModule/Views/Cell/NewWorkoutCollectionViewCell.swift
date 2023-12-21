@@ -15,7 +15,6 @@ class NewWorkoutCollectionViewCell: UICollectionViewCell {
     private let workoutImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
-        image.image = UIImage(named: "default")?.withRenderingMode(.alwaysTemplate)
         image.tintColor = .mainDarkGreen
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -47,6 +46,11 @@ class NewWorkoutCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - open Methods
+    func getImage(image: String) {
+        workoutImageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
+    }
 }
 
 //MARK: - private Methods
@@ -63,8 +67,8 @@ private extension NewWorkoutCollectionViewCell {
     func setConstraints() {
         NSLayoutConstraint.activate([
             imageBackgroundView.topAnchor.constraint(equalTo: topAnchor, constant: 7),
-            imageBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            imageBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             imageBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7),
             
             

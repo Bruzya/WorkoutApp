@@ -22,6 +22,7 @@ final class RepeatsView: UIView {
     
     //MARK: - Properties
     var (sets, reps, timer) = (0, 0, 0)
+    
     //MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -34,6 +35,13 @@ final class RepeatsView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - open Methods
+    func resetSliderViewValues() {
+        setsView.resetValues()
+        repsView.resetValues()
+        timerView.resetValues()
     }
 }
 
